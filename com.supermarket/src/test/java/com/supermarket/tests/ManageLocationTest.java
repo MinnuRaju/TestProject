@@ -43,16 +43,43 @@ public class ManageLocationTest extends BaseClass {
 	}
 
 @Test(description="Validate edited location",enabled=true,priority=1)
-public void editlocationdetails() throws IOException{
+   public void editlocationdetails() throws IOException{
 	excel=new ExcelUtil();
     mloc=new ManageLocation(driver);
-    general.clickCommand(mloc.editbtn);
     general=new GeneralUtility();
+    general.clickCommand(mloc.editbtn);
     general.selectByVisibletext(mloc.countrydrop, Constants.countrydrop);
     general.selectByVisibletext(mloc.statedrop, Constants.statedropedit);
     Assert.assertEquals(mloc.edit(excel.readData(24, 1), excel.readData(25, 1)), Constants.locationalertedit);
 	 
 }
 
+@Test(description="Validate the search result",priority=2,enabled=true)
+   public void search() throws IOException, InterruptedException {
+	  excel=new ExcelUtil();
+	  general=new GeneralUtility();
+	  general.clickCommand(mloc.search);
+	  general.selectByVisibletext(mloc.countrydrop, Constants.countrydrop);
+	  Thread.sleep(3000);
+	  general.selectByVisibletext(mloc.statedrop, Constants.statedrop);
+      mloc.searchItem(excel.readData(26, 1));
+      String text=mloc.tableTest(1, 1, excel.readData(26, 1));
+      Assert.assertEquals(text, excel.readData(26, 1));
+      general.clickCommand(mloc.resetsearch);
+      
+	
+}
+
+@Test(description="Validate the delete item",enabled=true,priority=3)   
+    public void delete() {
+       mloc=new ManageLocation(driver);
+       Assert.assertEquals(mloc.deleteItem(), Constants.deletelocalertmsg);
+
+      
+      
+      
+	
+	
+}
 
 }
