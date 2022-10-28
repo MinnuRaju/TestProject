@@ -10,8 +10,8 @@
   <parameter name="browser"  value="chrome" ></parameter>
  
     <classes>
-      <class name="com.supermarket.tests.ManageProductTest"/>
+      <class name="com.supermarket.tests.ManageLocationTest"/>
     </classes>
-  </test> <!-- Test --> 
+  </test> <!-- Test -->
 </suite> <!-- Suite -->
 

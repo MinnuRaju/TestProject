@@ -29,6 +29,8 @@ public class Constants {
   public static final String locationalertedit="×\n" + "Alert!\n" + "Location Updated Successfully";
   public static final String manageorderchangestatus="Out For Delivery";
   public static final String manageorderchangedeliverydata="Out For Delivery";
+  public static final String deletelocalertmsg="×\n" + "Alert!\n" + "Location Deleted Successfully";
+
 
 
 

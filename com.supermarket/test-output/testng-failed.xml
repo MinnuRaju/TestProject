@@ -7,20 +7,19 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.supermarket.tests.ManageProductTest">
+      <class name="com.supermarket.tests.ManageLocationTest">
         <methods>
           <include name="afterClass"/>
           <include name="afterMethod"/>
           <include name="beforeTest"/>
           <include name="afterSuite"/>
-          <include name="StatusAndFeaturedButtonClick"/>
           <include name="beforeClass"/>
           <include name="afterTest"/>
           <include name="beforeMethod"/>
+          <include name="search"/>
           <include name="createReport"/>
-          <include name="createNewItem"/>
         </methods>
-      </class> <!-- com.supermarket.tests.ManageProductTest -->
+      </class> <!-- com.supermarket.tests.ManageLocationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

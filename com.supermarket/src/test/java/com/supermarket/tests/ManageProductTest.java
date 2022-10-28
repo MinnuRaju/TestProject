@@ -89,8 +89,6 @@ public class ManageProductTest extends BaseClass {
 @Test(description="search manage product",enabled=false)
    public void search() throws IOException, InterruptedException {
 	  excel=new ExcelUtil();
-	 /// loginp=new LoginPage(driver);
-     // loginp.login(excel.readData(0, 1), excel.readData(1, 1));
       mproduct=new ManageproductPage(driver);
       mproduct.search(excel.readData(17, 1), excel.readData(18, 1));
       general=new GeneralUtility();
